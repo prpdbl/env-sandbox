@@ -41,3 +41,8 @@ jobs:
     run: terraform apply -no-color -auto-approve
 
     # Publish Assets
+    - name: Upload kubeconfig file
+      uses: actions/upload-artifact@v2
+      with:
+        name: kubeconfig
+        path: kubeconfig
