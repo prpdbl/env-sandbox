@@ -26,3 +26,18 @@ jobs:
         sudo cp ~/aws/aws-iam-authenticator /usr/local/bin/aws-iam-authenticator
 
     # Apply Terraform
+    - uses: hashicorp/setup-terraform@v1
+       with
+      terraform_version: 0.12.19
+    - name: Terraform fmt
+    run: terraform fmt
+    - name: Terraform Init
+    run: terraform init
+    - name: Terraform Validate
+    run: terraform validate -no-color
+    - name: Terraform Plan
+    run: terraform plan -no-color
+    - name: Terraform Apply
+    run: terraform apply -no-color -auto-approve
+
+    # Publish Assets
