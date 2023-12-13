@@ -18,7 +18,7 @@ locals {
   k8s_cluster_name = "ms-cluster"
 }
 
-# Network Configuration
+# Network Configuration ... 
 
 # EKS Configuration
 
