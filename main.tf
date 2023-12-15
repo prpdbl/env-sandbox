@@ -6,9 +6,6 @@
 
 provider "aws" {
   region = "us-east-1"
-  access_key = "AKIAUESVT2CQBEDBBVBX"
-  secret_key = "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"
-
 }
 
 resource "aws_security_group" "project-iac-sg" {
